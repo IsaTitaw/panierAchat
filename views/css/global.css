@@ -1,0 +1,42 @@
+/*HEADER*/
+.fond{
+    background-image: url("https://wallpapersafari.com/bing-animated-wallpaper-archive/");
+    z-index: -1;
+}
+
+.jumbotron {
+    background-color: deeppink;
+    color: deeppink; /* Le texte sera affiché en rose*/
+}
+
+/*END HEADER */
+
+/*HOME*/
+.carousel-item img{
+    max-height: 300px;
+    width: auto!important;
+}
+
+footer{
+    background:#DCDCDC;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height: 50px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+/*.container{*/
+/*    margin-bottom: 80px;*/
+/*}*/
+
+#carouselExampleControls{
+    margin-bottom: 80px;
+}
+
+.products{
+    margin-bottom: 50px;
+}
