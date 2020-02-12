@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-01-16 21:02:04
+/* Smarty version 3.1.33, created on 2020-01-30 20:13:13
   from 'C:\xampp\htdocs\projetWeb\marcWepika\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e20c13c939933_83137851',
+  'unifunc' => 'content_5e332ac9861738_32384195',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4413ffa6bc9d58bcb5467bcad901d094a40ed53d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetWeb\\marcWepika\\views\\templates\\header.tpl',
-      1 => 1579204922,
+      1 => 1580411592,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e20c13c939933_83137851 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e332ac9861738_32384195 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
+
+    <meta charset="UTF-8">
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
     <?php if (isset($_smarty_tpl->tpl_vars['assets']->value) && is_array($_smarty_tpl->tpl_vars['assets']->value)) {?>

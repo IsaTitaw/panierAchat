@@ -1,4 +1,6 @@
 <head>
+
+    <meta charset="UTF-8">
     <title>{$title}</title>
     {if isset($assets) && is_array($assets)}
     {if !empty($assets['css'])}
