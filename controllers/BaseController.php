@@ -30,7 +30,10 @@ abstract class BaseController
         $this->smarty->getFooter();
     }
 
-
+     protected function getAssets()
+    {
+        return $assets = array("css" => array(), "js" => array());
+    }
 
     protected function getTemplateVars()
     {
