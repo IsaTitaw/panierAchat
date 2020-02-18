@@ -34,6 +34,9 @@ switch ($request) {
         $controller = new HomeController();
         break;
 
+    case 'category':
+        $controller = new CategoryController();
+
     default:
         http_response_code(404);
         //        require __DIR__ . '/views/404.php';
