@@ -9,6 +9,7 @@ class Product extends BaseEntity{
     protected $long_description;
     protected $short_description;
     protected $stock;
+    protected $category;
 
     public static $definition= array(
         "table" => "products",
@@ -19,7 +20,8 @@ class Product extends BaseEntity{
             "name",
             "price",
             "short_description",
-            "stock")
+            "stock",
+            "category")
     );
 
     /**
@@ -117,6 +119,29 @@ class Product extends BaseEntity{
     {
         $this->stock = $stock;
     }
+
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @return array
+     */
+    public static function getDefinition()
+    {
+        return self::$definition;
+    }
+
+    /**
+     * @param array $definition
+     */
+    public static function setDefinition($definition)
+    {
+        self::$definition = $definition;
+    }
+
+
 
 }
 
