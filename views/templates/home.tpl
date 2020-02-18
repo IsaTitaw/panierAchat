@@ -25,13 +25,13 @@
         </div>
     </div>
 
-
-
     <div class="row product_list ">
         {foreach $products as $product}
             <div class="col-md-3 product_card ">
                 <div class="card">
-                    <img src="images/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
+                    <a href="product/{$product->getId()}" rel="Vous avez choisi">
+                        <img src="images/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">{$product->getName()}</h5>
                         <p class="card-text">{$product->getShortDescription()}</p>

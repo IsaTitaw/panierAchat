@@ -3,13 +3,13 @@
     <meta charset="UTF-8">
     <title>{$title}</title>
     {if isset($assets) && is_array($assets)}
-    {if !empty($assets['css'])}
+        {if !empty($assets['css'])}
 
-        {foreach $assets['css'] as $css}
+            {foreach $assets['css'] as $css}
 
-            <link rel="stylesheet" type="text/css" href="{$css}" media="screen">
+                <link rel="stylesheet" type="text/css" href="{$css}" media="screen">
 
-        {/foreach}
+            {/foreach}
         {/if}
     {/if}
 
@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/projetWeb/marcWepika/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Products</a>
@@ -42,21 +42,24 @@
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0" action="/projetWeb/marcWepika/search" method="post">
+                <input class="form-control mr-sm-2" type="search" placeholder="Nom du produit" aria-label="Search" name="productName">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            {if isset($userEmail)}
+                <span class="ml-3">Bonjour {$userEmail}</span> <a href="/projetWeb/marcWepika/logout" class="btn btn-danger ml-3">Logout</a>
+            {else}
+                <a href="/projetWeb/marcWepika/login" class="btn btn-success ml-3">Login</a>
+            {/if}
         </div>
     </nav>
+
+
 
 </head>
 
 
 
-{*<div id="header">*}
-{*    <div class="fond">*}
-{*        <div class="jumbotron">*}
-{*            <h1 class="display-4">C'est les soldes!!!</h1>*}
-{*            <p class="lead">Du 01 au 31 janvier 2020</p>*}
-{*            <hr class="my-4">*}
-{*            <p>Venez profitez de réductions FARAMINEUSES sur plus de 100 articles!</p>*}
-{*            <a class="btn btn-primary btn-lg" href="#" role="button">J'en profite</a>*}
-{*        </div>*}
-{*    </div>*}
+
 </div>

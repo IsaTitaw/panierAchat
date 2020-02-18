@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-06 21:00:10
+/* Smarty version 3.1.33, created on 2020-02-16 17:30:34
   from 'C:\xampp\htdocs\projetWeb\marcWepika\views\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e3c704ab19330_95634629',
+  'unifunc' => 'content_5e496e2acf5830_54117770',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f89bf23e29422f7860893b5dd80ee8a11742b0b8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetWeb\\marcWepika\\views\\templates\\home.tpl',
-      1 => 1581019195,
+      1 => 1581870633,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e3c704ab19330_95634629 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e496e2acf5830_54117770 (Smarty_Internal_Template $_smarty_tpl) {
 ?><meta charset="UTF-8">
 
 <div class="container">
@@ -48,8 +48,6 @@ function content_5e3c704ab19330_95634629 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
 
-
-
     <div class="row product_list ">
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'product');
@@ -58,9 +56,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 ?>
             <div class="col-md-3 product_card ">
                 <div class="card">
-                    <img src="images/products/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
+                    <a href="product/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
+" rel="Vous avez choisi">
+                        <img src="images/products/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
 .jpg" class="card-img-top" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value->getName();?>
 ">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['product']->value->getName();?>
 </h5>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-01-30 20:13:13
+/* Smarty version 3.1.33, created on 2020-02-16 17:14:31
   from 'C:\xampp\htdocs\projetWeb\marcWepika\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e332ac9861738_32384195',
+  'unifunc' => 'content_5e496a67d21022_78799617',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4413ffa6bc9d58bcb5467bcad901d094a40ed53d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetWeb\\marcWepika\\views\\templates\\header.tpl',
-      1 => 1580411592,
+      1 => 1581869667,
       2 => 'file',
     ),
   ),
@@ -20,25 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e332ac9861738_32384195 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e496a67d21022_78799617 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
 
     <meta charset="UTF-8">
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
     <?php if (isset($_smarty_tpl->tpl_vars['assets']->value) && is_array($_smarty_tpl->tpl_vars['assets']->value)) {?>
-    <?php if (!empty($_smarty_tpl->tpl_vars['assets']->value['css'])) {?>
+        <?php if (!empty($_smarty_tpl->tpl_vars['assets']->value['css'])) {?>
 
-        <?php
+            <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['assets']->value['css'], 'css');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['css']->value) {
 ?>
 
-            <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['css']->value;?>
+                <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['css']->value;?>
 " media="screen">
 
-        <?php
+            <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -68,7 +68,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/projetWeb/marcWepika/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Products</a>
@@ -80,10 +80,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0" action="/projetWeb/marcWepika/search" method="post">
+                <input class="form-control mr-sm-2" type="search" placeholder="Nom du produit" aria-label="Search" name="productName">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <?php if (isset($_smarty_tpl->tpl_vars['userEmail']->value)) {?>
+                <span class="ml-3">Bonjour <?php echo $_smarty_tpl->tpl_vars['userEmail']->value;?>
+</span> <a href="/projetWeb/marcWepika/logout" class="btn btn-danger ml-3">Logout</a>
+            <?php } else { ?>
+                <a href="/projetWeb/marcWepika/login" class="btn btn-success ml-3">Login</a>
+            <?php }?>
         </div>
     </nav>
 
+
+
 </head>
+
 
 
 
