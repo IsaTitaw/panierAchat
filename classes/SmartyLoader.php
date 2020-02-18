@@ -35,6 +35,7 @@ class SmartyLoader extends Smarty
             'title' => $title,
             'assets'=>$assets,
             'bootstrap'=>$bootstrap,
+            'userEmail'=>isset($_SESSION["currentUser"]) ? $_SESSION["currentUser"] : null
         ));
 
         $this->display('header.tpl');

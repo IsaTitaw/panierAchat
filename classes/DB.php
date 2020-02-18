@@ -18,7 +18,7 @@ class DB
         if(!self::$instance){       //si $instance est vide alors on crée la connection à la DB via PDO
             self::$instance = new PDO(DB_DSN, DB_USER, DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
             self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            self::$instance->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND );
+            self::$instance->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND,false);
         }
 
         return self::$instance;

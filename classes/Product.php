@@ -118,7 +118,6 @@ class Product extends BaseEntity{
         $this->stock = $stock;
     }
 
-
 }
 
 
@@ -129,12 +128,3 @@ class Product extends BaseEntity{
 
 
 
-
-
-//    static function getAllProducts(){
-//        $pdo = DB::getInstance();
-//        $sql="Select * FROM products";
-//        $stmt = $pdo->prepare($sql);
-//        $stmt->execute();
-//        return $stmt->fetchAll();
-//    }
