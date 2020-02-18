@@ -8,10 +8,11 @@ class HomeController extends BaseController
 
     protected function getTemplateVars()
     {
-        var_dump(new Product(1));
+
         return array(
             "controller" => $this->name,
-            "products" => array(new Product(1)),
+//            "products" => array(new Product(3)),
+            "products" => ProductController::getAllProducts(),
         );
     }
 
