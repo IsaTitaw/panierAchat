@@ -33,7 +33,7 @@ class ProductController extends BaseController
 
         $rows = $stmt->fetchAll();
         $products = [];
-
+        var_dump($products);
         foreach ($rows as $key => $row) {
             $products[] = Product::fromRow(new Product(), $row);
         }

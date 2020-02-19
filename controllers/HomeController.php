@@ -1,6 +1,5 @@
 <?php
-require_once('./controllers/BaseController.php');//sert à charger la classe parent dont on a besoin
-require_once ('./classes/Product.php');
+
 
 class HomeController extends BaseController
 {
