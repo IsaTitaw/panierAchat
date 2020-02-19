@@ -47,6 +47,11 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
 
+            <form class="form-inline" action="/projetWeb/marcWepika/category" method="post">
+                <input class="form-control mr-sm-2" type="search" placeholder="Choose a category" aria-label="categoryName" name="categoryName">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Category</button>
+            </form>
+
             {if isset($userEmail)}
                 <span class="ml-3">Bonjour {$userEmail}</span> <a href="/projetWeb/marcWepika/logout" class="btn btn-danger ml-3">Logout</a>
             {else}

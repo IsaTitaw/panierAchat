@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-16 17:14:31
+/* Smarty version 3.1.33, created on 2020-02-18 10:57:18
   from 'C:\xampp\htdocs\projetWeb\marcWepika\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e496a67d21022_78799617',
+  'unifunc' => 'content_5e4bb4feedf544_96913064',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4413ffa6bc9d58bcb5467bcad901d094a40ed53d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetWeb\\marcWepika\\views\\templates\\header.tpl',
-      1 => 1581869667,
+      1 => 1582019826,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e496a67d21022_78799617 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4bb4feedf544_96913064 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
 
     <meta charset="UTF-8">
@@ -83,6 +83,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <form class="form-inline my-2 my-lg-0" action="/projetWeb/marcWepika/search" method="post">
                 <input class="form-control mr-sm-2" type="search" placeholder="Nom du produit" aria-label="Search" name="productName">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <form class="form-inline" action="/projetWeb/marcWepika/category" method="post">
+                <input class="form-control mr-sm-2" type="search" placeholder="Choose a category" aria-label="categoryName" name="categoryName">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Category</button>
             </form>
 
             <?php if (isset($_smarty_tpl->tpl_vars['userEmail']->value)) {?>
