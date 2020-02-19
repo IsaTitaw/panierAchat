@@ -10,7 +10,7 @@ foreach (glob(__DIR__."/controllers/*.php") as $filename)
 
 session_start();
 $request = explode('/', $_SERVER['REQUEST_URI'])[3];
-
+var_dump($request);
 switch ($request) {
     case '' :
         $controller = new HomeController();
