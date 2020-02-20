@@ -7,10 +7,10 @@ class CategoryController extends BaseController
     protected $name= 'category';
 
 
-    public function getProductsByCategory()
+    public function getProductsByCategory($categorie)
     {
-        var_dump($_POST["categoryName"]);
-        switch ($_POST["categoryName"]){
+
+        switch ($categorie){
             case '':
                 $result = Db::getInstance()->query("SELECT * FROM products")->fetchAll();
              
