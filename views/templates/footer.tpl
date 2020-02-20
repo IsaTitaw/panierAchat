@@ -1,22 +1,14 @@
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-            <p>Mentions légales ezv...</p>
-            </div>
+    <div class="card text-center">
+        <div class="card-header">
+            Titaw sprl
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Nous sommes là pour vous aider</h5>
+            <p class="card-text">En naviguant sur ce site, vous acceptez nos conditions générales</p>
+            <a href="#" class="btn btn-primary">Mentions légales</a>
         </div>
     </div>
-    <title>{$title}</title>
-    {if isset($assets) && is_array($assets)}
-        {if !empty($assets['css'])}
 
-            {foreach $assets['css'] as $css}
-
-                <link rel="stylesheet" type="text/css" href="{$css}" media="screen">
-
-            {/foreach}
-        {/if}
-    {/if}
 
     {if isset($bootstrap) && $bootstrap}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

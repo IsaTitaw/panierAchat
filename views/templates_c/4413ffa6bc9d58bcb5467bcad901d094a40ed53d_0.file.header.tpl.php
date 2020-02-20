@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-20 11:26:27
+/* Smarty version 3.1.33, created on 2020-02-20 12:56:07
   from 'C:\xampp\htdocs\projetWeb\marcWepika\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4e5ed346d360_30161835',
+  'unifunc' => 'content_5e4e73d7192009_68002315',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4413ffa6bc9d58bcb5467bcad901d094a40ed53d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetWeb\\marcWepika\\views\\templates\\header.tpl',
-      1 => 1582194386,
+      1 => 1582199766,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4e5ed346d360_30161835 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e73d7192009_68002315 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
 
     <meta charset="UTF-8">
@@ -45,18 +45,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <?php }?>
     <?php }?>
 
-    <?php if (isset($_smarty_tpl->tpl_vars['bootstrap']->value) && $_smarty_tpl->tpl_vars['bootstrap']->value) {?>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"><?php echo '</script'; ?>
->
-    <?php }?>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
@@ -89,15 +77,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 
-            <div class="btn-group">
+            <div class="btn-group ml-3">
                 <button type="button" class="btn btn-success">Catégories</button>
                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Animaux</a></li>
-                    <li><a href="#">Travail</a></li>
-                    <li><a href="#">Maison</a></li>
+                    <li><a href="/projetWeb/marcWepika/category/animaux">Animaux</a></li>
+                    <li><a href="/projetWeb/marcWepika/category/travail">Travail</a></li>
+                    <li><a href="/projetWeb/marcWepika/category/maison">Maison</a></li>
                 </ul>
             </div>
 
