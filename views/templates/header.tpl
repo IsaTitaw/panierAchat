@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="views/img/logo.jpg" alt="zen attitude" width="50 px" height="50px">
+            <img src="{$url}/views/img/logo.jpg" alt="zen attitude" width="50 px" height="50px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,21 +42,41 @@
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" action="/projetWeb/marcWepika/search" method="post">
+
+            <form class="form-inline" action="/projetWeb/marcWepika/search" method="post">
                 <input class="form-control mr-sm-2" type="search" placeholder="Nom du produit" aria-label="Search" name="productName">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button type="button" class="btn btn-success">Search</button>
             </form>
 
-            <form class="form-inline" action="/projetWeb/marcWepika/category" method="post">
-                <input class="form-control mr-sm-2" type="search" placeholder="Choose a category" aria-label="categoryName" name="categoryName">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Category</button>
-            </form>
+
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-success">Catégories</button>
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Animaux</a></li>
+                    <li><a href="#">Travail</a></li>
+                    <li><a href="#">Maison</a></li>
+                </ul>
+            </div>
+
 
             {if isset($userEmail)}
-                <span class="ml-3">Bonjour {$userEmail}</span> <a href="/projetWeb/marcWepika/logout" class="btn btn-danger ml-3">Logout</a>
+                <span class="ml-5">Bonjour {$userEmail}</span> <a href="/projetWeb/marcWepika/logout" class="btn btn-danger ml-3">Logout</a>
             {else}
-                <a href="/projetWeb/marcWepika/login" class="btn btn-success ml-3">Login</a>
+                <a href="/projetWeb/marcWepika/login" class="btn btn-success ml-5">Login</a>
             {/if}
+
+
+            {*            <form class="form-inline" action="/projetWeb/marcWepika/category" method="post">*}
+{*                <input class="form-control mr-sm-2" type="search" placeholder="Choose a category" aria-label="categoryName" name="categoryName">*}
+{*                <button type="button" class="btn btn-success">Category</button>*}
+            {*            </form>*}
+
+
+
         </div>
     </nav>
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-18 10:57:18
+/* Smarty version 3.1.33, created on 2020-02-20 11:26:27
   from 'C:\xampp\htdocs\projetWeb\marcWepika\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4bb4feedf544_96913064',
+  'unifunc' => 'content_5e4e5ed346d360_30161835',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4413ffa6bc9d58bcb5467bcad901d094a40ed53d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projetWeb\\marcWepika\\views\\templates\\header.tpl',
-      1 => 1582019826,
+      1 => 1582194386,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4bb4feedf544_96913064 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e5ed346d360_30161835 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
 
     <meta charset="UTF-8">
@@ -60,7 +60,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="views/img/logo.jpg" alt="zen attitude" width="50 px" height="50px">
+            <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+/views/img/logo.jpg" alt="zen attitude" width="50 px" height="50px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -80,22 +81,38 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" action="/projetWeb/marcWepika/search" method="post">
+
+            <form class="form-inline" action="/projetWeb/marcWepika/search" method="post">
                 <input class="form-control mr-sm-2" type="search" placeholder="Nom du produit" aria-label="Search" name="productName">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button type="button" class="btn btn-success">Search</button>
             </form>
 
-            <form class="form-inline" action="/projetWeb/marcWepika/category" method="post">
-                <input class="form-control mr-sm-2" type="search" placeholder="Choose a category" aria-label="categoryName" name="categoryName">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Category</button>
-            </form>
+
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-success">Catégories</button>
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Animaux</a></li>
+                    <li><a href="#">Travail</a></li>
+                    <li><a href="#">Maison</a></li>
+                </ul>
+            </div>
+
 
             <?php if (isset($_smarty_tpl->tpl_vars['userEmail']->value)) {?>
-                <span class="ml-3">Bonjour <?php echo $_smarty_tpl->tpl_vars['userEmail']->value;?>
+                <span class="ml-5">Bonjour <?php echo $_smarty_tpl->tpl_vars['userEmail']->value;?>
 </span> <a href="/projetWeb/marcWepika/logout" class="btn btn-danger ml-3">Logout</a>
             <?php } else { ?>
-                <a href="/projetWeb/marcWepika/login" class="btn btn-success ml-3">Login</a>
+                <a href="/projetWeb/marcWepika/login" class="btn btn-success ml-5">Login</a>
             <?php }?>
+
+
+                        
+
+
         </div>
     </nav>
 

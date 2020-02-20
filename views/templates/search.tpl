@@ -3,7 +3,7 @@
         <div class="col-md-3 product_card ">
             <div class="card">
                 <a href="product/{$product->getId()}" rel="Vous avez choisi">
-                    <img src="images/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
+                    <img src="{$url}/images/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">{$product->getName()}</h5>
