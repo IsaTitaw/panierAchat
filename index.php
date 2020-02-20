@@ -1,5 +1,5 @@
 <?php
-
+const URLBase = "http://localhost/projetWeb/marcWepika/";
 require_once('./classes/SmartyLoader.php');
 require_once('./classes/DB.php');
 
@@ -10,7 +10,7 @@ foreach (glob(__DIR__."/controllers/*.php") as $filename)
 
 session_start();
 $request = explode('/', $_SERVER['REQUEST_URI'])[3];
-var_dump($request);
+//var_dump($request);
 switch ($request) {
     case '' :
         $controller = new HomeController();
@@ -35,7 +35,9 @@ switch ($request) {
         break;
 
     case 'category':
-        $controller = new CategoryController();
+        $categorie = explode('/', $_SERVER['REQUEST_URI'])[4];
+        var_dump($categorie);
+        $controller = new CategoryController($categorie);
 
     default:
         http_response_code(404);
